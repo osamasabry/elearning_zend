@@ -1,0 +1,50 @@
+<h1 id="h">Please Login Here !</h1>
+<br/>
+
+<style>
+/*    .errors{
+        display: none;
+    }*/
+    
+</style>
+<script>
+//     var span;
+    
+//     onload=function(){
+    
+
+//     span=document.getElementById("username");
+//     span.onblur =function(){
+							
+//         if(span.value=="")
+//         {	
+//                 this.className="";
+// //                uspan.style.display="none";
+                
+//         }
+//         else
+//         {
+//                 this.focus();
+//                 this.select();
+//                 this.className="Error";
+//         }		
+//     }		
+
+// }
+
+</script>
+<?php
+   echo $this->form;
+?>
+ <?php
+   if(isset($this->errorMessage))
+   {
+    echo $this->errorMessage;
+    echo "<br/><br/>";
+
+    echo "<p id='p'>Please Login Again Here</p>";
+    echo "<br/>";
+    echo "<a href='".$this->baseUrl()."/users/login/' class='btn btn-success'>Login Again</a>";
+
+   }
+?>

@@ -1,0 +1,44 @@
+<?php
+    foreach ($this->showmaterial as $shsingle){
+      echo "<img src='".$this->baseUrl()."/images/materials/".$shsingle['mat_image']."'/>";
+      echo "<br/><br/><lable>".$shsingle['desc_image']."</lable><br><br/>";
+     if($this->admin=="admin" ){
+     	echo "<a href='".$this->baseUrl()."/materials/editimage/course_id/".$this->course_id."/id_type/".$this->id_type."/id_mat/".$shsingle['id_mat']."'><button class='btn btn-info'>Updata</button><br><hr/>";
+     }
+
+    
+      echo "<br/><br/><a href='".$this->baseUrl()."/materials/downloadimage/course_id/".$this->course_id."/id_type/".$this->id_type."/id_mat/".$shsingle['id_mat']."'><button class='btn btn-info'>Download</button> </a> <br/><br/>";
+      
+    }
+
+
+?>
+
+<h3><?php
+$obj=new Application_Model_DbTable_Users();
+foreach ($this->comments as $comment){
+  $id=$comment['id_user'];
+  $user=$obj->getUserById($id);
+  $userid=$user[0]['id_user'];
+  echo "<h1>".($user[0]['username'])." ****  (".($user[0]['signature']).")</h1>";
+ 
+
+  echo'<br/>'.($comment['contain_comt']);
+
+  if ($userid==$this->user_id) {
+    echo "<a href='".$this->baseUrl()."/materials/editcomment/course_id/".$comment['id_cours']."/id_type/".$this->id_type."/id_mat/".$comment['id_mat']."/id_comt/".$comment['id_comt']."'>Edit </a><a href='".$this->baseUrl()."/comments/delete/course_id/".$comment['id_cours']."/id_type/".$this->id_type."/id_mat/".$comment['id_mat']."/id_comt/".$comment['id_comt']."'> Delete </a> <br /> <br/> <br/> <br/>'";
+    
+  }
+  }
+?>
+</h3>
+<h1>Add Comment</h1>
+
+    <?php 
+
+  echo $this->form;
+?>
+</div>
+<hr/>
+
+                            

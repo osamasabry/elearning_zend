@@ -1,0 +1,55 @@
+#h
+{	 
+	 color:#339900;
+	 font-size: 16pt;
+	 margin-top: 10px;
+	 margin-left:390px;
+}
+
+#id_user-label,#email-label,#username-label,#password-label,#confirmPassword-label,#gender-label,#image-label,#country-label,#signature-label
+{
+	font-family:solid bold;
+	font-size: 14pt;
+	margin-top: 5px;
+	margin-left:300px;
+
+}
+#email,#username,#password,#confirmPassword,#signature
+{
+	margin-top: 5px;
+	width:450px;
+	height:30px;
+	margin-left:300px;
+}
+#gender-male,#gender-female
+{
+	margin-top: 5px;
+	width: 50px;
+	margin-left:300px;
+}
+#image
+{
+	margin-top: 5px;
+	margin-left:300px;
+}
+#country
+{
+	margin-top: 5px;
+	width: 450px;
+	margin-left:300px;
+
+}
+#Register,#submit
+{
+	margin-left:350px;
+	margin-top: 20px;
+	width:280px;
+	
+}
+
+#p
+{
+	color:red;
+}
+
+
