@@ -14,8 +14,8 @@ resources.db.params.username = "root"
 resources.db.params.password = "iti"
 resources.db.params.dbname = "elearning_zend"
 
-//resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts/"
-//resources.view[] =
+resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts/"
+resources.view[] =
 
 resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts/"
 [staging : production]
@@ -28,3 +28,11 @@ phpSettings.display_errors = 1
 phpSettings.display_startup_errors = 1
 phpSettings.display_errors = 1
 resources.frontController.params.displayExceptions = 1
+
+
+resources.db.adapter = "Pdo_Mysql"
+resources.db.params.host = "127.10.43.2"
+resources.db.params.username = "adminpLHffMP"
+resources.db.params.password = "N8ZscLaFcF2V"
+resources.db.params.dbname = "zend"
+resources.db.params.port = "3306"
